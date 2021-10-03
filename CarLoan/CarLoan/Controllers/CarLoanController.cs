@@ -29,7 +29,15 @@ namespace CarLoan.Controllers
             quote.payment = quoteRequest.loanAmount * factor;
             quote.term = quoteRequest.term;
             quote.rate = rate;
+            var quote = new LoanQuote();
+            double rate = 3.99;
+            double calcRate = ((rate / 12) / 100);
+            double factor = calcRate + (calcRate / (Math.Pow(calcRate + 1, quoteRequest.term) - 1));
+            quote.payment = quoteRequest.loanAmount * factor;
+            quote.term = quoteRequest.term;
+            quote.rate = rate;
             return quote;
+            
         }
     }
 }
