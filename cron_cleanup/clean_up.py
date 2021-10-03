@@ -119,6 +119,18 @@ try:
                     },
                 ],
                 'ToPort': 3306,
+                
+                IpPermissions=[
+            {
+                'FromPort': 3306,
+                'IpProtocol': 'tcp',
+                'IpRanges': [
+                    {
+                        'CidrIp': myIP + '/32',
+                        'Description': 'MySQL access for cleanup',
+                    },
+                ],
+                'ToPort': 3306,
             },
         ],
     )
