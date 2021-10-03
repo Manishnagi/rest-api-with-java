@@ -44,7 +44,9 @@ public class Enquiry {
     public void setName(String name) {
         this.name = name;
     }
-
+ public void setEnquiryId(int enquiryId) {
+        this.enquiryId = enquiryId;
+    }
     /**
      * @return the email
      */
@@ -79,6 +81,10 @@ public class Enquiry {
     public int getCarId() {
         return carId;
     }
+    
+     public void setEnquiryId(int enquiryId) {
+        this.enquiryId = enquiryId;
+    }
 
     /**
      * @param carId the carId to set
@@ -90,6 +96,17 @@ public class Enquiry {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Enquiry ID: ")
+                .append(enquiryId)
+                .append(" Car ID: ")
+                .append(carId)
+                .append(" Name: ")
+                .append(name)
+                .append(" email: ")
+                .append(email);
+        return sb.toString();
+    }
+     StringBuilder sb = new StringBuilder();
         sb.append("Enquiry ID: ")
                 .append(enquiryId)
                 .append(" Car ID: ")

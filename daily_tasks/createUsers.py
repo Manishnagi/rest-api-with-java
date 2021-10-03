@@ -16,7 +16,7 @@ with open('companies.csv') as csvfile:
 
 users = []
 emails = []
-users.append(["firstname","lastname","email","country","company"])
+
 
 for company in companyNames:
   userCount = random.randint(10,25)
@@ -27,14 +27,7 @@ for company in companyNames:
     email = firstName.lower() + "." + lastName.lower() + "@" + company.lower() + ".com"
     users.append([firstName, lastName, email, country, company])
     emails.append([email])
-    
-     for y in range(count):
-    firstName = firstNames[random.randint(1, len(firstNames))-1]
-    lastName = lastNames[random.randint(0, len(lastNames))-1]
-    country = countries[random.randint(0,len(countries))-1]
-    email = firstName.lower() + "." + lastName.lower() + "@" + company.lower() + ".com"
-    users.append([firstName, lastName, email, country, company])
-    emails.append([email])
+
 
 with open('users.csv', mode='w') as user_file:
   user_writer = csv.writer(user_file)
