@@ -27,13 +27,7 @@ for company in companyNames:
     email = firstName.lower() + "." + lastName.lower() + "@" + company.lower() + ".com"
     users.append([firstName, lastName, email, country, company])
     emails.append([email])
- with open('companies.csv') as csvfile:
-  companies = csv.reader(csvfile)
-  line_count = 0
-  for row in companies:
-    if line_count != 0:
-      companyNames.append(row[0])
-    line_count += 1
+
 
 with open('users.csv', mode='w') as user_file:
   user_writer = csv.writer(user_file)
