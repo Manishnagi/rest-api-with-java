@@ -44,7 +44,18 @@ def delete_s3_objects(IDsDeleted):
         s3_client.delete_object(Bucket=s3_bucket_name, Key='IMG_' + str(id) + '.jpeg')
 
 
-config = {
+config = {ndidate = random.randrange(limit)
+        randoms.append(candidate)
+    randoms = list(dict.fromkeys(randoms))
+    return randoms
+
+def trim_table(selectQuery, deleteQuery, max, toDelete, cnx):
+    cursor = cnx.cursor()
+    cursor.execute(selectQuery)
+    IDs = cursor.fetchall()
+    cursor.close()
+    
+    IDsDeleted = []
   'user': os.environ["DATABASE_USERNAME"],
   'password': os.environ["DATABASE_PASSWORD"],
   'host': 'mysql-rds',
