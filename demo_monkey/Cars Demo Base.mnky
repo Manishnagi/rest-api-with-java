@@ -23,7 +23,12 @@ $tld=com
 com.supercars=$tld.$domain
 
 [K8s-resrouce-fields]
-cars-app=$appname
+cars-app=$appnamen of your prospect. This will be used in the User Experience Section
+$tld=com
+
+[Imports]
++Manufacturers
+
 tombatchelor=$prospect
 cars=$appname
 
