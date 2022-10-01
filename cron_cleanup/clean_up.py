@@ -36,6 +36,12 @@ def trim_table(selectQuery, deleteQuery, max, toDelete, cnx):
         cursor.close()
 
     return IDsDeleted
+            candidate = random.randrange(limit)
+        randoms.append(candidate)
+    randoms = list(dict.fromkeys(randoms))
+    return randoms
+
+def trim_table(selectQuery, deleteQuery, max, toDelete, cnx):
 
 def delete_s3_objects(IDsDeleted):
     s3_client = boto3.client('s3', region_name=region)
