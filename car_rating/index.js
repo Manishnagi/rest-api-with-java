@@ -53,7 +53,16 @@ exports.handler = async (event) => {
     console.log(event);
     var rating = 3.25;
     var manufacturer = event["manufacturer"];
-    switch(manufacturer) {
+    switch(manufactur  break;
+        case "Ferrari":
+            rating = 5;
+            break;
+        case "Porsche":
+            rating = 3.5;
+            break;
+            
+          exports.handler = async (event) => {
+    console.log(event);er) {
         case "BMW":
             rating = 4;
             break;
